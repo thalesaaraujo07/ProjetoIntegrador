@@ -123,10 +123,10 @@ Histórico de rastreabilidade de evolução de requisitos do projeto (**Transiç
 * **Status:** ✅ Concluído
 
 ### 🛠️ Mudança 2
-* **Descrição:** Implementação de esteira automatizada de CI/CD integrada à plataforma Docker Hub.
-* **Itens Impactados:** Criação e configuração do diretório `.github/workflows/ci-cd.yaml` e do arquivo `Dockerfile` na raiz do sistema.
-* **Motivo:** Substituição de processos manuais de empacotamento e entrega por esteiras ágeis e automatizadas seguindo os padrões modernos de DevOps.
-* **Impacto:** Médio (Reestruturação das rotinas de infraestrutura de implantação, sem afetar o código local).
+* **Descrição:** Implementação de autenticação com três perfis de usuário e proteção de rotas.
+* **Itens Impactados:** Componentes de login, rotas, guards de autenticação e armazenamento local.
+* **Motivo:** Garantir segurança e controle de acesso às funcionalidades.
+* **Impacto:** Alto (Alterou toda a navegação do sistema).
 * **Status:** ✅ Concluído
 
 ### 🛠️ Mudança 3
@@ -134,6 +134,20 @@ Histórico de rastreabilidade de evolução de requisitos do projeto (**Transiç
 * **Itens Impactados:** Configuração de rotas gerais (`app.routes.ts`) e inserção de componentes de segurança guardas de perfil (`auth.guard.ts` e `role.guard.ts`).
 * **Motivo:** Restringir o acesso a dashboards e telas de controle administrativo (chaves e relatórios) apenas a colaboradores autorizados, blindando dados sensíveis.
 * **Impacto:** Alto (Refatoração de rotas e segurança de dados do frontend).
+* **Status:** ✅ Concluído
+
+### 🛠️ Mudança 4
+* **Descrição:** O módulo de entregas foi expandido para incluir rastreabilidade completa das operações.
+* **Itens Impactados:** Módulo de Entregas, serviços de persistência, histórico de movimentações e dashboard
+* **Motivo:** Garantir rastreabilidade, auditoria e transparência das operações realizadas pelos usuários.
+* **Impacto:** Alto (Foi necessária a alteração da estrutura dos objetos persistidos, criação de novos campos de auditoria e atualização das interfaces responsáveis pela exibição dos históricos.).
+* **Status:** ✅ Concluído
+
+### 🛠️ Mudança 5
+* **Descrição:** Implementação de esteira automatizada de CI/CD integrada à plataforma Docker Hub.
+* **Itens Impactados:** Criação e configuração do diretório `.github/workflows/ci-cd.yaml` e do arquivo `Dockerfile` na raiz do sistema.
+* **Motivo:** Substituição de processos manuais de empacotamento e entrega por esteiras ágeis e automatizadas seguindo os padrões modernos de DevOps.
+* **Impacto:** Médio (Reestruturação das rotinas de infraestrutura de implantação, sem afetar o código local).
 * **Status:** ✅ Concluído
 
 ---
